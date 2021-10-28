@@ -8,10 +8,10 @@ namespace LinkedListDataStructure
         {
             Console.WriteLine("Welcome To Linked List Data Structure");
             LinkedList list = new LinkedList();
-            list.Add(56);
-            list.Add(30);
-            list.Add(70);
             list.Display();
+            list.AddFirst(70);
+            list.AddFirst(30);
+            list.AddFirst(56);
             Console.ReadLine();
         }
     }
