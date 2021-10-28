@@ -15,6 +15,9 @@ namespace LinkedListDataStructure
             list.InsertAt(2, 30);
             Console.WriteLine("30 Is Inserted Between 56 and 70");
             list.Display();
+            Console.WriteLine();
+            list.DeleteFirst();
+            list.Display();
             Console.ReadLine();
         }
     }
