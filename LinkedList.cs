@@ -145,5 +145,31 @@ namespace LinkedListDataStructure
             Console.Write("The deleted node is: " + node.next.data);
             node.next = null;
         }
+
+        internal void SearchFirst(int value)
+        {
+            if(this.head == null)
+            {
+                Console.WriteLine("List is empty");
+            }
+            Node temp = head;
+            int position = 1;
+            int count = 0;
+            while(temp != null)
+            {
+                if(temp.data == value)
+                {
+                    Console.WriteLine("Search Found at position: " + position);
+                    count++;
+                    break;
+                }
+                temp = temp.next;
+                position++;
+            }
+            if(count == 0)
+            {
+                Console.WriteLine("There is no data that match the entered value in the list");
+            }
+        }
     }
 }
