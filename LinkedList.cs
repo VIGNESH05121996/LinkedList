@@ -180,5 +180,39 @@ namespace LinkedListDataStructure
             InsertAt(this.place + 1, replaceAfterValue);
 
         }
+
+        internal void SearchAndDelete(int value)
+        {
+            if(this.head == null)
+            {
+                Console.WriteLine("List is Empty");
+            }
+            else
+            {
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    if(temp.next.data == value)
+                    {
+                        Console.WriteLine("Deleted the node: " + temp.next.data);
+                        temp.next = temp.next.next;
+                    }
+                    temp = temp.next;
+                }
+            }
+          
+        }
+
+        internal int SizeOf()
+        {
+            int count = 1;
+            Node temp = this.head;
+            while(temp.next != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            return count;
+        }
     }
 }
