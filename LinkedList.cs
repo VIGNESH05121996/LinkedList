@@ -126,5 +126,24 @@ namespace LinkedListDataStructure
             Console.WriteLine("Deleted Node: " + this.head.data);
             this.head = this.head.next;
         }
+
+        internal void DeleteLast()
+        {
+            if(this.head == null)
+            {
+                Console.WriteLine("The list is empty");
+            }
+            if(this.head.next==null)
+            {
+                Console.WriteLine("Only 1 element in the list");
+            }
+            Node node = head;
+            while(node.next.next != null)
+            {
+                node = node.next;
+            }
+            Console.Write("The deleted node is: " + node.next.data);
+            node.next = null;
+        }
     }
 }
