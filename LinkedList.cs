@@ -9,6 +9,7 @@ namespace LinkedListDataStructure
     public class LinkedList
     {
         internal Node head;
+        public int place;
         internal void Add(int data)
         {
             Node node = new Node(data);
@@ -146,7 +147,7 @@ namespace LinkedListDataStructure
             node.next = null;
         }
 
-        internal void SearchFirst(int value)
+        internal int SearchFirst(int value)
         {
             if(this.head == null)
             {
@@ -170,6 +171,14 @@ namespace LinkedListDataStructure
             {
                 Console.WriteLine("There is no data that match the entered value in the list");
             }
+            return position;
+        }
+
+        internal void InsertNewNode(int newValue,int replaceAfterValue)
+        {
+            this.place = SearchFirst(newValue);
+            InsertAt(this.place + 1, replaceAfterValue);
+
         }
     }
 }

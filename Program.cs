@@ -13,7 +13,7 @@ namespace LinkedListDataStructure
             list.AppendList(70);
             list.Display();
             Console.WriteLine();
-            list.SearchFirst(56);
+            list.InsertNewNode(30,40);
             list.Display();
             Console.ReadLine();
         }
